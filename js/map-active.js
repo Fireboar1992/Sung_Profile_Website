@@ -1,12 +1,12 @@
 var map;
-var latlng = new google.maps.LatLng(56.9496, 24.1052);
+var latlng = new google.maps.LatLng(25.014018, 121.539995);
 var stylez = [{
     featureType: "all",
     elementType: "all",
     stylers: [{
         saturation: -25
-            }]
-        }];
+    }]
+}];
 var mapOptions = {
     zoom: 15,
     center: latlng,
@@ -22,7 +22,7 @@ var geocoder_map = new google.maps.Geocoder();
 var address = 'Riga';
 geocoder_map.geocode({
     'address': address
-}, function (results, status) {
+}, function(results, status) {
     if (status == google.maps.GeocoderStatus.OK) {
         map.setCenter(results[0].geometry.location);
         var marker = new google.maps.Marker({
